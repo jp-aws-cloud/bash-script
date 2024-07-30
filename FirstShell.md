@@ -53,3 +53,39 @@ Now that it exists, it must be added to the PATH variable:
 ```bash
 PATH=$PATH:$HOME/bin
 ```
+
+For this change to be applied to every shell you open, add it to a file that the shell will source when it
+is invoked. This will be `.bash_profile`, `.bashrc`, or `.profile` depending on how bash is invoked. These
+files are sourced only for interactive shells, not for scripts.
+
+## Creating the File and Running the Script
+
+Usually you would use a text editor to create your program, but for a simple script like this, it’s not
+necessary to call up an editor. You can create the file from the command line using redirection:
+
+```sh
+echo echo Hello, World! > bin/hw
+```
+
+`The greater-than sign (>) tells the shell to send the output of a command to the specified file, rather
+than to the terminal.`
+
+The program can now be run by calling it as an argument to the shell command:
+
+```bash
+bash bin/hw
+```
+
+That works, but it’s not entirely satisfactory. You want to be able to type hw, without having to
+precede it with bash, and have the command executed. To do that, give the file execute permissions:
+
+```sh
+chmod +x bin/hw
+```
+
+Now the command can be run using just its name:
+
+```bash
+$ hw
+Hello, World!
+```
