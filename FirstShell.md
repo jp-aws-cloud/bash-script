@@ -89,3 +89,32 @@ Now the command can be run using just its name:
 $ hw
 Hello, World!
 ```
+
+### Building a Better “Hello, World!”
+
+Earlier in the chapter you created a script using redirection. That script was, to say the least, minimalist.
+All programs, even a one-liner, require documentation. Information should include at least the author,
+the date, and a description of the command. Open the file bin/hw in your text editor, and add the
+information in Listing 1-1 using comments.
+
+```sh
+# Listing 1-1. hw
+
+#!/bin/bash
+#: Title : hw
+#: Date : 2008-11-26
+#: Author : "Chris F.A. Johnson" <shell@cfajohnson.com>
+#: Version : 1.0
+#: Description : print Hello, World!
+#: Options : None
+printf "%s\n" "Hello, World!"
+
+```
+
+Comments begin with an `octothorpe`, or `hash (#)`, at the beginning of a word and continue until the
+end of the line. The shell ignores them. I often add a character after the hash to indicate the type of
+comment. I can then search the file for the type I want, ignoring other comments.
+The first line is a special type of comment called a `shebang` or `hash-bang`. It tells the system which
+interpreter to use to execute the file. The characters `#!` must appear at the very beginning of the first line;
+in other words, they must be the `first two bytes` of the file for it to be recognized. 
+
