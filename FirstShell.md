@@ -118,3 +118,15 @@ The first line is a special type of comment called a `shebang` or `hash-bang`. I
 interpreter to use to execute the file. The characters `#!` must appear at the very beginning of the first line;
 in other words, they must be the `first two bytes` of the file for it to be recognized. 
 
+### Summary
+The following are the commands, concepts, and variables you learned in this chapter.
+Commands
+
+- pwd: Prints the name of the current working directory
+- cd: Changes the shell’s working directory
+- echo: Prints arguments separated by a space and terminated by a newline
+- type: Displays information about a command
+- mkdir: Creates a new directory
+- chmod: Modifies the permissions of a file
+- source: a.k.a. . (dot): executes a script in the current shell environment
+- printf: Prints the arguments as specified by a format string
